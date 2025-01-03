@@ -1,10 +1,28 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+
+
+function Button() {
+  const [count, setCount] = useState({ click: 0, hover: 0 })
+  return (
+    <>
+      <button
+        onMouseEnter={() => { setCount({ click: count.click, hover: count.hover + 1 }) }}
+        onClick={() => { setCount({ click: count.click + 1, hover: count.hover }) }}
+      >
+        clicked {count.click} times
+        <br></br>
+        hovered {count.hover} times
+      </button>
+      <p>
+        Edit <code>src/App.tsx</code> and save to test HMR
+      </p>
+    </>
+  )
+}
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -18,12 +36,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <Button />
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
