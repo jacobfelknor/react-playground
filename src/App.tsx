@@ -53,9 +53,9 @@ function Button2(props: Button1Props) {
   }
 }
 
-// This is easiest to write (no interface), but I can't provide a type for `startHover` without giving it a default
-// value. If I want to require this prop, I have to leave it untyped which TypeScript isn't happy about (but works)
-function Button3({ startClick = 0, startHover }) {
+// This avoids writing a dedicated interface, instead specifying the typing inline
+// I think I like this best unless the data structure for these props is used in many places
+function Button3({ startClick = 0, startHover }: { startClick?: number, startHover: number }) {
   const [count, setCount] = useState({ click: startClick, hover: startHover })
   if (count.click == 10) {
     return <>You clicked too many times! <br></br> </>
