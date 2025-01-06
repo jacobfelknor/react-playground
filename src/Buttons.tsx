@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NameCard from "./NameCard";
 
 // This apparently is preferred by TypeScript because my typing is complete
 interface Button1Props {
@@ -52,7 +53,7 @@ export function Button2(props: Button1Props) {
 }
 
 // This avoids writing a dedicated interface, instead specifying the typing inline
-// I think I like this best unless the data structure for these props is used in many places
+// I think I like this best unless the data structure for these props is used in many places or is very complex
 export default function Button3({ startClick = 0, startHover }: { startClick?: number, startHover: number }) {
     const [count, setCount] = useState({ click: startClick, hover: startHover })
     if (count.click == 10) {
@@ -70,6 +71,8 @@ export default function Button3({ startClick = 0, startHover }: { startClick?: n
                     hovered {count.hover} times
                 </button>
                 <br />
+                <br />
+                <NameCard showName={true} name={"Jacob Felknor"} btnClickCount={count.click} />
             </>
         )
     }
