@@ -4,7 +4,31 @@ import viteLogo from '/vite.svg'
 import { Button1, Button2 } from './Buttons.js'
 import Button3NamedWhatIWant from './Buttons.js'
 
+import Person from './Person.js'
+
 function App() {
+
+  const people: Array<Person> = [{
+    id: 0,
+    name: 'Creola Katherine Johnson',
+    profession: 'mathematician',
+  }, {
+    id: 1,
+    name: 'Mario José Molina-Pasquel Henríquez',
+    profession: 'chemist',
+  }, {
+    id: 2,
+    name: 'Mohammad Abdus Salam',
+    profession: 'physicist',
+  }, {
+    id: 3,
+    name: 'Percy Lavon Julian',
+    profession: 'chemist',
+  }, {
+    id: 4,
+    name: 'Subrahmanyan Chandrasekhar',
+    profession: 'astrophysicist',
+  }];
 
   return (
     <>
@@ -20,7 +44,7 @@ function App() {
       <div className="card">
         <Button1 startHover={1} />
         <Button2 startHover={2} />
-        <Button3NamedWhatIWant startHover={3} />
+        <Button3NamedWhatIWant startHover={3} people={people} />
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

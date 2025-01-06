@@ -1,12 +1,16 @@
+import Person from "./Person"
+
 export default function NameCard(
-    { showName, name, btnClickCount: btnThreeCount = 0 }: { showName: boolean, name: string, btnClickCount: number }
+    { profession = "all", people, btnClickCount: btnThreeCount = 0 }: { profession?: string, people: Array<Person>, btnClickCount: number }
 ) {
-    if (showName) {
-        return <>
-            {btnThreeCount < 5 && "Showing name: "}
-            {btnThreeCount < 5 ? name : "Stop Clicking..."}
-        </>
-    } else {
-        return ""
-    }
+
+    const filteredPeople = profession == "all" ? people : people.filter(person => person.profession == profession);
+    const peopleJSX = filteredPeople.map(person =>
+        <div key={person.id}>
+            {btnThreeCount < 5 && `Showing ${person.profession}: `}
+            {btnThreeCount < 5 ? person.name : "Stop Clicking..."}
+        </div>
+    )
+
+    return peopleJSX;
 }
