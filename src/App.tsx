@@ -9,6 +9,11 @@ import Message from './Message.js'
 import Counter from './Counter.js'
 import RequestTracker from './RequestTracker.js'
 import Sculptors from './Sculptors.js'
+import ArtBucketList from './ArtBucketList.js'
+import CityQuiz from './CityQuiz.js'
+import TravelPlan from './TravelPlan.js'
+import Accordion from './Accordian.js'
+import TaskApp from './tasks/TaskApp.js'
 
 function App() {
 
@@ -79,9 +84,38 @@ function App() {
 
       <br /><br />
       <hr />
-      {/* <h1>Inspiring Sculptors</h1> */}
       <div className="card">
         <Sculptors />
+      </div>
+
+      <br /><br />
+      <hr />
+      <div className="card">
+        <ArtBucketList />
+      </div>
+
+      <br /><br />
+      <hr />
+      <div className="card">
+        <CityQuiz />
+      </div>
+
+      <br /><br />
+      <hr />
+      <div className="card">
+        <Accordion />
+      </div>
+
+      <br /><br />
+      <hr />
+      <div className="card">
+        <TaskApp />
+      </div>
+
+      <br /><br />
+      <hr />
+      <div className="card">
+        <TravelPlan />
       </div>
     </>
   )
