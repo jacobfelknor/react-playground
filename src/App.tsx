@@ -5,6 +5,8 @@ import { Button1, Button2 } from './Buttons.js'
 import Button3NamedWhatIWant from './Buttons.js'
 
 import Person from './Person.js'
+import Message from './Message.js'
+import Counter from './Counter.js'
 
 function App() {
 
@@ -46,6 +48,21 @@ function App() {
         <Button2 startHover={2} />
         <Button3NamedWhatIWant startHover={3} people={people} />
       </div>
+
+      <br /><br />
+      <hr />
+
+      <div className="card">
+        <Message />
+      </div>
+
+      <br /><br />
+      <hr />
+
+      <div className="card">
+        <Counter />
+      </div>
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
