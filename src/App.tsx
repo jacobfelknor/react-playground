@@ -7,6 +7,7 @@ import Button3NamedWhatIWant from './Buttons.js'
 import Person from './Person.js'
 import Message from './Message.js'
 import Counter from './Counter.js'
+import RequestTracker from './RequestTracker.js'
 
 function App() {
 
@@ -43,6 +44,11 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+      <br /><hr />
+      <h1>Button events</h1>
       <div className="card">
         <Button1 startHover={1} />
         <Button2 startHover={2} />
@@ -51,21 +57,24 @@ function App() {
 
       <br /><br />
       <hr />
-
+      <h1>Message</h1>
       <div className="card">
         <Message />
       </div>
 
       <br /><br />
       <hr />
-
+      <h1>Counter</h1>
       <div className="card">
         <Counter />
       </div>
 
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <br /><br />
+      <hr />
+      <h1>Request Tracker</h1>
+      <div className="card">
+        <RequestTracker />
+      </div>
     </>
   )
 }
