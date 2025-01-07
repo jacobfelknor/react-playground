@@ -66,6 +66,8 @@ export default function Button3(
         return (
             <>
                 <button
+                    // REMEMBER: state vars, even when they're objects, should be treated as immutable
+                    // and should always be *replaced*, not modified
                     onMouseEnter={() => { setCount({ click: count.click, hover: count.hover + 1 }) }}
                     onClick={() => { setCount({ click: count.click + 1, hover: count.hover }) }}
                 >
