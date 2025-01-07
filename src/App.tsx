@@ -8,6 +8,7 @@ import Person from './Person.js'
 import Message from './Message.js'
 import Counter from './Counter.js'
 import RequestTracker from './RequestTracker.js'
+import Sculptors from './Sculptors.js'
 
 function App() {
 
@@ -74,6 +75,13 @@ function App() {
       <h1>Request Tracker</h1>
       <div className="card">
         <RequestTracker />
+      </div>
+
+      <br /><br />
+      <hr />
+      {/* <h1>Inspiring Sculptors</h1> */}
+      <div className="card">
+        <Sculptors />
       </div>
     </>
   )
