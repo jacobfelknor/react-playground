@@ -40,6 +40,8 @@ export function Button2(props: Button1Props) {
         return (
             <>
                 <button
+                    // REMEMBER: state vars, even when they're objects, should be treated as immutable
+                    // and should always be *replaced*, not modified
                     onMouseEnter={() => { setCount({ click: count.click, hover: count.hover + 1 }) }}
                     onClick={() => { setCount({ click: count.click + 1, hover: count.hover }) }}
                 >
@@ -68,8 +70,10 @@ export default function Button3(
                 <button
                     // REMEMBER: state vars, even when they're objects, should be treated as immutable
                     // and should always be *replaced*, not modified
-                    onMouseEnter={() => { setCount({ click: count.click, hover: count.hover + 1 }) }}
-                    onClick={() => { setCount({ click: count.click + 1, hover: count.hover }) }}
+                    // NOTE: that in this button component, we use "spread syntax" so we only have to specify
+                    // the changed properties. Compare with the prev button components
+                    onMouseEnter={() => { setCount({ ...count, hover: count.hover + 1 }) }}
+                    onClick={() => { setCount({ ...count, click: count.click + 1 }) }}
                 >
                     clicked {count.click} times
                     <br></br>
