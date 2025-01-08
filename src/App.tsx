@@ -14,6 +14,7 @@ import CityQuiz from './CityQuiz.js'
 import TravelPlan from './TravelPlan.js'
 import Accordion from './Accordian.js'
 import TaskApp from './tasks/TaskApp.js'
+import StopWatch from './StopWatch.js'
 
 function App() {
 
@@ -104,6 +105,12 @@ function App() {
       <hr />
       <div className="card">
         <Accordion />
+      </div>
+
+      <br /><br />
+      <hr />
+      <div className="card">
+        <StopWatch />
       </div>
 
       <br /><br />
