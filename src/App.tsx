@@ -15,6 +15,7 @@ import TravelPlan from './TravelPlan.js'
 import Accordion from './Accordian.js'
 import TaskApp from './tasks/TaskApp.js'
 import StopWatch from './StopWatch.js'
+import CatFriends from './CatFriends.js'
 
 function App() {
 
@@ -111,6 +112,12 @@ function App() {
       <hr />
       <div className="card">
         <StopWatch />
+      </div>
+
+      <br /><br />
+      <hr />
+      <div className="card">
+        <CatFriends />
       </div>
 
       <br /><br />
